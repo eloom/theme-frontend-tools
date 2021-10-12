@@ -1,0 +1,65 @@
+@pager__font-size: 1.5rem;
+@pager__font-weight: @font-weight__light;
+@pager-icon__font-margin: .7rem;
+@pager-icon__font-vertical-align: top;
+@pager-icon__font-size: @pager__font-size;
+@pager-icon__font-line-height: @icon-font__line-height;
+
+//  Common _____________________________________________
+& when (@media-common = true) {
+	.cms-index-index {
+		.page-header {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 5;
+			background: 0 0;
+		}
+
+		&:not('top-fixed') {
+			.navigation .level0 > .level-top {
+				color: #FFF;
+			}
+		}
+
+		&.top-fixed {
+			.page-header {
+				background-color: #FFF;
+			}
+		}
+
+		.navigation.wrapper {
+			margin-bottom: 0;
+		}
+	}
+
+	.pages {
+		.lib-pager();
+
+		.action {
+			width: 3.4rem;
+
+			&.previous {
+				margin-right: 1.2rem;
+			}
+
+			&.next {
+				margin-left: 1.2rem;
+			}
+		}
+
+		.item {
+			margin: 0 1rem 0 0;
+		}
+
+		a.page {
+			padding: 0 1rem;
+		}
+	}
+}
+
+//  Desktop _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+
+}
