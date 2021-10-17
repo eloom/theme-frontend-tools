@@ -17,8 +17,8 @@
 @navigation-desktop-level0-item__color: var(--navigation-desktop-sections-item-color);
 @navigation-desktop-level0-item__hover__color: var(--navigation-desktop-sections-item-color);
 
-@submenu-desktop-item__color: @color-black;
-@submenu-desktop-item__hover__color: @color-black;
+@submenu-desktop-item__color: var(--navigation-desktop-sections-item-color);
+@submenu-desktop-item__hover__color: var(--navigation-desktop-sections-item-color);
 @submenu-desktop__border-width: 0;
 
 //  Common _____________________________________________
@@ -320,7 +320,7 @@
 
 		ul[role="menu"] {
 			.lib-vendor-prefix-display(flex);
-			//justify-content: space-evenly;
+			justify-content: space-evenly;
 		}
 
 		li.category-item {
@@ -337,12 +337,8 @@
 	}
 
 	.nav-sections {
-		order: 1;
-		flex: 1;
-		display: flex;
-		justify-content: center;
-		//.lib-vendor-prefix-flex-basis(0);
-		//.lib-vendor-prefix-flex-shrink(0);
+		.lib-vendor-prefix-flex-basis(100%);
+		.lib-vendor-prefix-flex-shrink(0);
 	}
 
 	.nav-sections-item-title {

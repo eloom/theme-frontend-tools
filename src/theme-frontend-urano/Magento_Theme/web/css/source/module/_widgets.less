@@ -2,14 +2,29 @@
 & when (@media-common = true) {
 	.widget {
 		.block-title {
-			text-transform: uppercase;
 			text-align: center;
 			width: 100%;
 			border: 0;
 			margin: 0 0 2rem 0;
+			position: relative;
+
+			&:before {
+				content: '';
+				width: 100%;
+				height: 1px;
+				background: var(--widget-title-color);
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+			}
+
 			strong {
 				.lib-font-size(26);
 				color: var(--widget-title-color);
+				background-color: #FFF;
+				padding: 0 1rem;
+				position: relative;
 			}
 		}
 		.item {

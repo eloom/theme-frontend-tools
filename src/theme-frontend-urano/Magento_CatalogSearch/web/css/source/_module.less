@@ -36,9 +36,8 @@
     }
 
     .block-search {
-        order: 2;
         margin-bottom: 0;
-        flex: 0;
+        flex-grow: 1;
 
         .block {
             &-title {
@@ -81,8 +80,9 @@
 
         .control {
             clear: both;
-            margin: 0 -@layout__width-xs-indent;
-            padding: 0 @layout__width-xs-indent;
+            margin: 0;
+            padding: 0;
+            width: 100%;
         }
 
         .nested {
@@ -228,6 +228,9 @@
         .field.search {
             .lib-vendor-prefix-display(flex);
             justify-content: flex-end;
+            padding: 0 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: @form-element-input__border-radius;
         }
         .label {
             // FIXME: caixa de pesquisa
@@ -238,33 +241,23 @@
 
             &.active {
                 + .control {
-                    position: absolute;
-                    opacity: 1;
-                    height: 8rem;
-                    z-index: 99;
-                    width: 98%;
+
                 }
             }
         }
 
         .control {
-            width: 0;
-            border-top: 0;
-            margin: 0;
-            padding: 0;
-            position: static;
-            top: 100%;
-            left: 1%;
-            opacity: 0;
-            background-color: @color-white;
+
         }
 
         input {
             .lib-input-placeholder(@form-element-input-placeholder__color);
-            //padding: 0 2rem;
-            font-size: 3rem;
             width: 100%;
             height: 100%;
+            border: 0;
+            &:not([disabled]):focus {
+                box-shadow: none;
+            }
         }
 
         .action.search {

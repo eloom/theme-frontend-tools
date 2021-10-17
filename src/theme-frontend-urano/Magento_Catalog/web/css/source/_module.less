@@ -543,10 +543,26 @@
         &.upsell,
         &.related {
             .title {
-                border-bottom: 1px solid @color-black;
+                position: relative;
+                text-align: center;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background: var(--widget-title-color);
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    //transform: translate(0, -50%);
+                }
 
                 strong {
-                    text-transform: uppercase;
+                    .lib-font-size(26);
+                    color: var(--widget-title-color);
+                    background-color: #FFF;
+                    padding: 0 1rem;
+                    position: relative;
                 }
             }
             .action.select {
