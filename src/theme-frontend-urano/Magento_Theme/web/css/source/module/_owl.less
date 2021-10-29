@@ -1,79 +1,83 @@
 //  Common _____________________________________________
 & when (@media-common = true) {
-	.owl-theme {
-		.owl-nav {
-			position: absolute;
-			width: 100%;
-			top: 50%;
-			left: 0;
-			height: 50px;
-			-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
-			text-align: center;
-			-webkit-tap-highlight-color: transparent;
-		}
+  .owl-theme {
+    .owl-nav {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      height: 50px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-		.owl-nav [class*="owl-"] {
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: #fff;
-			margin: 0;
-			padding: 4px 7px;
-			background: var(--owl-nav-bg-color);
-			display: inline-block;
-			cursor: pointer;
-			border-radius: 3px;
-		}
+    .owl-nav [class*="owl-"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      margin: 0;
+      padding: 4px 7px;
+      background: var(--owl-nav-bg-color);
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 3px;
+    }
 
-		.owl-nav .owl-next {
-			left: auto;
-			right: 0;
-		}
+    .owl-nav .owl-next {
+      left: auto;
+      right: 0;
+    }
 
-		.owl-nav button {
-			&.owl-prev::after,
-			&.owl-next::after {
-				font-family: 'theme-default';
-				font-size: 3.5rem;
-				color: @color-gray60;
-				background-color: transparent;
-			}
+    .owl-nav button {
+      &.owl-prev::after,
+      &.owl-next::after {
+        font-family: 'theme-default';
+        font-size: 3.5rem;
+        color: @color-gray60;
+        background-color: transparent;
+      }
 
-			&.owl-prev::after {
-				content: "\ea19";
-			}
+      &.owl-prev::after {
+        content: "\ea19";
+      }
 
-			&.owl-next::after {
-				content: "\ea1a";
-			}
-		}
+      &.owl-next::after {
+        content: "\ea1a";
+      }
+    }
 
-		.owl-nav [class*="owl-"]:hover {
-			background: transparent !important;
-		}
+    .owl-nav [class*="owl-"]:hover {
+      background: transparent !important;
+    }
 
-		.owl-dots .owl-dot {
-			span {
-				width: 4rem;
-				height: .25rem;
-			}
+    .owl-dots .owl-dot {
+      span {
+        width: 4rem;
+        height: .25rem;
+      }
 
-			&.active,
-			&:hover {
-				span {
-					background: var(--owl-nav-bg-color) !important;
-				}
-			}
-		}
+      &.active,
+      &:hover {
+        span {
+          background: var(--owl-nav-bg-color) !important;
+        }
+      }
+    }
 
-		.owl-nav.disabled + .owl-dots {
-			position: absolute;
-			width: 100%;
-			bottom: 0;
-			-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
-			-webkit-tap-highlight-color: transparent;
-		}
-	}
+    .owl-nav.disabled + .owl-dots {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+  .owl-carousel .owl-stage-outer {
+    padding-bottom: 1rem;
+  }
 }

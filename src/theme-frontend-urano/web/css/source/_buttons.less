@@ -6,9 +6,10 @@
 //  Display settings
 @button__border-radius: .25rem;
 
-@button-primary__background: @theme__color__primary;
+@button-primary__background: var(--color-five);
 @button-primary__border: 1px solid @theme__color__primary;
-@button-primary__color: @color-white;
+@button-primary__color: @color-black;
+@button-primary__hover__background: var(--color-five);
 
 //  Button with icon
 @button-icon__font-size: @icon-font__size;
@@ -26,37 +27,36 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-	.action.primary {
-		.lib-button-primary();
-		letter-spacing: 1px;
-	}
+  .action.primary {
+    .lib-button-primary();
+    letter-spacing: 1px;
+  }
 
-	button,
-	a.action.primary {
-		.lib-css(border-radius, @button__border-radius);
-		.lib-css(line-height, @button-icon__line-height);
-	}
+  button,
+  a.action.primary {
+    .lib-css(border-radius, @button__border-radius);
+    .lib-css(line-height, @button-icon__line-height);
+  }
 
-	button {
-		&:active {
-			.lib-css(box-shadow, @button__shadow);
-		}
-	}
+  button {
+    &:active {
+      .lib-css(box-shadow, @button__shadow);
+    }
+  }
 
-	a.action.primary {
-		.lib-link-as-button();
-	}
+  a.action.primary {
+    .lib-link-as-button();
+  }
 
-	button,
-	a {
-		&.action {
-			&.primary,
-			&-primary,
-			&-secondary,
-			&.viewcart {
-				text-transform: uppercase;
-				font-weight: unset;
-			}
-		}
-	}
+  button,
+  a {
+    &.action {
+      &.primary,
+      &-primary,
+      &-secondary,
+      &.viewcart {
+        font-weight: unset;
+      }
+    }
+  }
 }

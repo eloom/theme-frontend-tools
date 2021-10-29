@@ -54,7 +54,6 @@
             }
         }
     }
-
     span[data-badge-dates] {
         top: 0;
         left: 0;
@@ -129,14 +128,19 @@
         margin-bottom: @indent__base;
     }
 
+    .catalog-product-view {
+        .columns {
+            background-color: #FFF;
+        }
+    }
+
     //
     //  Product images general container
     //  ---------------------------------------------
 
     .product-image-container {
-        display: inline-block;
         max-width: 100%;
-        width: 100% !important;
+        padding: .5rem;
     }
 
     .product-image-wrapper {
@@ -148,15 +152,9 @@
     }
 
     .product-image-photo {
-        bottom: 0;
         display: block;
-        height: auto;
-        left: 0;
         margin: auto;
         max-width: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
     }
 
     //
@@ -212,7 +210,6 @@
             .page-title {
                 line-height: @line-height__base;
                 margin-bottom: @indent__s;
-                text-transform: uppercase;
             }
         }
         .product-reviews-summary {
@@ -443,7 +440,7 @@
 
             .price-wrapper .price {
                 .lib-font-size(25);
-                font-weight: @font-weight__regular;
+                font-weight: @font-weight__semibold;
             }
 
             .price {
@@ -549,16 +546,16 @@
                 &:before {
                     content: '';
                     width: 100%;
-                    height: 1px;
-                    background: var(--widget-title-color);
+                    height: .1px;
+                    background: var(--border-color);
                     position: absolute;
                     top: 50%;
                     left: 0;
-                    //transform: translate(0, -50%);
                 }
 
                 strong {
                     .lib-font-size(26);
+                    font-weight: @font-weight__regular;
                     color: var(--widget-title-color);
                     background-color: #FFF;
                     padding: 0 1rem;
@@ -693,7 +690,6 @@
 //
 //  Mobile
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .catalog-product-view {
         .column.main {
@@ -763,11 +759,10 @@
 //
 //  Desktop
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .catalog-product-view {
         .columns {
-            margin: 0 10rem;
+            padding: 2rem;
         }
     }
     .product-info-main,
@@ -852,7 +847,7 @@
 
     .page-layout-1column {
         .product-info-main {
-            width: 38%;
+            width: 33%;
         }
         .product.media {
             width: 57%;

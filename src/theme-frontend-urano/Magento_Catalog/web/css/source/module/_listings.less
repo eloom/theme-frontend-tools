@@ -24,7 +24,6 @@
 		&-grid .widget-product-grid,
 		&.wrapper.grid,
 		&.carousel {
-
 			.product {
 				&-item {
 					div[class^="swatch-opt-"] {
@@ -70,6 +69,8 @@
 						display: flex;
 						flex-direction: column;
 						position: relative;
+						margin: 0 1rem;
+						border-top: 1px solid var(--border-color);
 					}
 
 					.price-box {
@@ -116,12 +117,13 @@
 		&-item {
 			font-size: 1.2rem;
 			vertical-align: top;
+			background-color: #FFF;
 
 			.products-grid & {
 				display: inline-block;
-				//margin-left: 1%;
+				margin-left: 2%;
 				padding: 0;
-				width: calc(~'(100% - 2%) / 2');
+				width: calc(~'(100% - 4%) / 2');
 			}
 
 			&:nth-child(2n + 1) {
@@ -143,6 +145,8 @@
 
 			&-info {
 				max-width: 100%;
+				border-radius: @form-element-input__border-radius;
+				border: 1px solid var(--border-color);
 
 				.page-products & {
 					width: 100%;
@@ -197,9 +201,14 @@
 			.price-box {
 				margin: @indent__s 0 @indent__m;
 
-				.price {
+				.price:not(.installments .price) {
 					font-weight: @font-weight__semibold;
+					font-size: 1.8rem;
 					white-space: nowrap;
+				}
+
+				.installments .price {
+					font-weight: @font-weight__semibold;
 				}
 
 				.price-label {
@@ -364,6 +373,10 @@
 			}
 		}
 	}
+
+	.products-grid .product-item {
+		margin-bottom: 1rem;
+	}
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
@@ -423,10 +436,6 @@
 				margin-left: 1%;
 				padding: 0;
 				width: calc(~'(100% - 4%) / 3');
-
-				&:nth-child(3n + 1) {
-					margin-left: 0;
-				}
 			}
 		}
 	}
@@ -480,15 +489,7 @@
 			.product-item {
 				margin-left: 1%;
 				padding: 0;
-				width: calc(~'(100% - 5%) / 4');
-
-				&:nth-child(3n + 1) {
-					margin-left: 1%;
-				}
-
-				&:nth-child(4n + 1) {
-					margin-left: 0;
-				}
+				width: calc(~'(100% - 4%) / 3');
 			}
 		}
 	}
