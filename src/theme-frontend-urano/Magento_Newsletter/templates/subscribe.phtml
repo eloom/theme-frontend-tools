@@ -2,8 +2,10 @@
 /** @var \Magento\Newsletter\Block\Subscribe $block */
 ?>
 <div class="block newsletter">
-    <div class="title"><?= $block->escapeHtml(__('Newsletter')) ?></div>
-	  <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_subscribe_block')->toHtml(); ?>
+    <div class="description">
+	    <h4><?= $block->escapeHtml(__('Newsletter')) ?></h4>
+	    <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_subscribe_block')->toHtml(); ?>
+    </div>
     <div class="content">
         <form class="form subscribe"
             novalidate
