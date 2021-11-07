@@ -13,13 +13,7 @@
 //
 //  Common
 //  _____________________________________________
-
 & when (@media-common = true) {
-
-	//
-	//  Minicart
-	//  ---------------------------------------------
-
 	.block-minicart {
 		.items-total {
 			float: left;
@@ -75,6 +69,25 @@
 		}
 
 		.block-content {
+			.extra {
+				.discount {
+					span.label {
+						display: block;
+						text-align: left;
+					}
+					.fieldset {
+						display: flex;
+						margin-bottom: 0;
+
+						.field {
+							&.coupon {
+								flex: 1;
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
 			> .actions {
 				margin-top: 15px;
 
@@ -83,7 +96,7 @@
 				}
 
 				> .primary {
-					margin: 0 @indent__s 15px;
+					margin: 0;
 
 					.action {
 						&.primary {
