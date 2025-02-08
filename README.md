@@ -6,4 +6,4 @@ Carrossel Full na Home
     Opções do Widget:
         - Layout: Tela cheia
 
-    
+yes | cp dev/tools/grunt/configs/local-themes.js /var/www/html/magento-247-p3.eloom.local/dev/tools/grunt/configs
