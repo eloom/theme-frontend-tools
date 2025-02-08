@@ -1,0 +1,58 @@
+@import 'source/lib/_lib.less';
+// Global lib
+@import 'source/_sources.less';
+// Theme styles
+@import 'source/_components.less'; // Components styles (modal/sliding panel)
+
+//  Common _____________________________________________
+& when (@media-common = true) {
+  :root {
+    --color-one: #F2F2F2;
+    --color-two: #141414;
+    --color-three: #707070;
+    --color-four: #1c6bba;
+    --color-five: #ffd919;
+
+    --text-color: #404040;
+    --text-color-intense: #8C8C8C;
+    --text-color-muted: #D9D9D9;
+    --text-bg-color: var(--color-one);
+
+    --theme-color-primary: var(--color-five);
+    --theme-color-primary-alt: var(--color-two);
+    --theme-color-secondary: var(--color-five);
+
+    --body-bg-color: #f9f9f9;
+    --header-color-ssl: #70B400;
+
+    --navigation-desktop-bg-color: var(--color-five);
+    --navigation-desktop-sections-item-color: var(--color-two);
+    --navigation-desktop-sections-submenu-item-color: var(--color-two);
+
+    --navigation-mobile-bg-color: #FFF;
+    --navigation-mobile-sections-item-color: var(--color-one);
+    --navigation-mobile-sections-item-bg-color: var(--color-five);
+
+    --minicart-bg-color: var(--color-two);
+    --owl-nav-bg-color: var(--color-five);
+
+    --footer-color-ssl: #4BE79C;
+    --footer-color: var(--color-one);
+    --footer-bg-color: #39393a;
+    --footer-links-color: var(--color-one);
+    --footer-links-color-hover: var(--color-one);
+    --footer-links-color-current: @primary__color__light;
+    --footer-links-separator-border-color: @color-gray-light4;
+
+    --badge-bg-color: var(--color-three);
+
+    --pager-bg-color: var(--color-three);
+    --pager-bg-color-active: var(--color-five);
+
+    --checkout-sidebar-bg-color: #F5F5F5;
+
+    --border-color: @border-color__base;
+
+    --widget-title-color: var(--color-two);
+  }
+}

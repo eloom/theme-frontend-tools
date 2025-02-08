@@ -1,7 +1,7 @@
 {
-  "name": "eloom/theme-frontend-urano",
-  "description": "Tema Urano para Magento",
-  "homepage": "https://eloom.tech/store/urano",
+  "name": "eloom/theme-frontend-fashion",
+  "description": "Tema Fashion para Magento",
+  "homepage": "https://eloom.tech/store/fashion",
   "keywords": [
     "magento",
     "magento2",
@@ -24,9 +24,8 @@
   "minimum-stability": "dev",
   "prefer-stable" : true,
   "require": {
-    "php": "~7.3|~7.4",
-    "magento/framework": "103.0.*",
-    "eloom/theme-frontend": "dev-main"
+    "php": "~8.3",
+    "magento/framework": "103.0.*"
   },
   "license": [
     "OSL-3.0",
@@ -34,7 +33,7 @@
   ],
   "autoload": {
     "files": [
-      "src/theme-frontend-urano/registration.php"
+      "src/theme-frontend-fashion/registration.php"
     ]
   }
 }
